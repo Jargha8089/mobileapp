@@ -6,6 +6,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -33,9 +34,21 @@ public class CreatePasswordActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId()==android.R.id.home){
             finish();
+        } else if (item.getItemId()==R.id.search) {
+            Toast.makeText(this, "Searched button is clicked", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId()==R.id.settings) {
+            Toast.makeText(this, "Settings button is clicked", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId()==R.id.location) {
+            Toast.makeText(this, "Location button is clicked", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

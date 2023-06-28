@@ -50,6 +50,10 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         } else if (item.getItemId()==R.id.search) {
             Toast.makeText(this, "Searched button is clicked", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId()==R.id.settings) {
+            Toast.makeText(this, "Settings button is clicked", Toast.LENGTH_SHORT).show();
+        } else if (item.getItemId()==R.id.location) {
+            Toast.makeText(this, "Location button is clicked", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -72,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         txtSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+                Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
                 startActivity(intent);
             }
         });
