@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/txtForgotPassword"
@@ -104,7 +104,25 @@
                     android:textSize="18dp"
                     android:textColor="@color/white"
                     android:layout_gravity="center"
-                    android:text=" / Register?" />
+                    android:text="Register?" />
+
+                <TextView
+                    android:id="@+id/txtTablayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text="Home" />
+
+                <TextView
+                    android:id="@+id/txtListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:text="ListView" />
 
             </LinearLayout>
 

@@ -18,9 +18,11 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtUsername, edtPassword;
     private AppCompatButton btnLogin;
     private TextView txtSignup;
+    private TextView txtTablayout;
     private Toolbar toolbar;
 
     private TextView txtForgotPassword;
+    private TextView txtListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,8 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin=findViewById(R.id.btnLogin);
         txtSignup=findViewById(R.id.txtSignup);
         txtForgotPassword=findViewById(R.id.txtForgotPassword);
+        txtTablayout=findViewById((R.id.txtTablayout));
+        txtListView = findViewById(R.id.txtListView);
 
         txtForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +80,22 @@ public class LoginActivity extends AppCompatActivity {
         txtSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        txtTablayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
+        txtListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,ViewListActivity.class);
                 startActivity(intent);
             }
         });

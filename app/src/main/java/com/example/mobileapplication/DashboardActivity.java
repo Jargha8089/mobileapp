@@ -13,7 +13,7 @@ public class DashboardActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
-    private int[] iconList = {R.drawable.ic_location, R.drawable.ic_search, R.drawable.ic_settings};
+    private int[] iconList = {R.drawable.ic_home, R.drawable.ic_category, R.drawable.ic_profile, R.drawable.ic_settings};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class DashboardActivity extends AppCompatActivity {
         adapter.addFragment(new HomeFragment(),"Home");
         adapter.addFragment(new CategoryFragment(),"Category");
         adapter.addFragment(new ProfileFragment(),"Profile");
+        adapter.addFragment(new SettingFragment(),"Setting");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         setIcon();
@@ -41,5 +42,6 @@ public class DashboardActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(iconList[0]);
         tabLayout.getTabAt(1).setIcon(iconList[1]);
         tabLayout.getTabAt(2).setIcon(iconList[2]);
+        tabLayout.getTabAt(3).setIcon(iconList[3]);
     }
 }
